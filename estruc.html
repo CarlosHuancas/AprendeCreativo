@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AprendeCreativo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculación del archivo CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>AprendeCreativo</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="article">
+            <h2>Creatividad</h2>
+            <p>Explora cómo potenciar tu creatividad para desarrollar proyectos innovadores y únicos.</p>
+            <img src="/Imagen/creativo.jpeg" alt="Creatividad">
+                <a href="creatividad.html"><button>Leer ahora</button></a>
+            <!-- Botón de WhatsApp dinámico -->
+                <button class="whatsapp-button" data-message="¡Hola! 👋 Estoy interesado en aprender más sobre la creatividad🎨✨ ¿Podrías darme más información? ¡Estoy emocionado por comenzar! 😊🛒">Contactar</button>
+        </div>
+        <div class="article">
+            <h2>Uso y Manejo del Color</h2>
+            <p>Descubre cómo usar el color de manera efectiva en tus diseños para comunicar emociones y mensajes.</p>
+            <img src="/Imagen/designer.jpeg" alt="Uso y Manejo del Color">
+                <a href="uso-manejo-color.html"><button>Leer ahora</button></a>
+            <!-- Botón de WhatsApp dinámico -->
+                <button class="whatsapp-button" data-message="Quiero aprender sobre el uso y manejo del color">Contactar</button>
+        </div>
+        <div class="article">
+            <h2>Elementos Visuales del Diseño</h2>
+            <p>Aprende a identificar y utilizar los elementos visuales esenciales para un diseño impactante.</p>
+            <img src="/Imagen/color.jpeg" alt="Elementos Visuales del Diseño">
+                <a href="elementos-visuales-diseno.html"><button>Leer ahora</button></a>
+            <!-- Botón de WhatsApp dinámico -->
+                <button class="whatsapp-button" data-message="Estoy interesado en elementos visuales del diseño">Contactar</button>
+        </div>
+        <div class="article">
+            <h2>Uso de Canva para Principiantes</h2>
+            <p>Guía básica para empezar a usar Canva y crear diseños profesionales con facilidad.</p>
+            <img src="/Imagen/canva.jpeg" alt="Uso de Canva para Principiantes">
+                <a href="canva-principiantes.html"><button>Leer ahora</button></a>
+            <!-- Botón de WhatsApp dinámico -->
+                <button class="whatsapp-button" data-message="Me gustaría saber más sobre Canva para principiantes">Contactar</button>
+        </div>
+        <div class="article">
+            <h2>¿Aprender con ChatGPT?</h2>
+            <p>Cómo aprovechar ChatGPT para aprender y mejorar tus habilidades creativas y de diseño.</p>
+            <img src="/Imagen/aprende.jpeg" alt="Aprender con ChatGPT">
+                <a href="aprender-chatgpt.html"><button>Leer ahora</button></a>
+            <!-- Botón de WhatsApp dinámico -->
+                <button class="whatsapp-button" data-message="Quiero aprender con ChatGPT">Contactar</button>
+        </div>
+    </div>
+
+    <script>
+        // Número de teléfono de WhatsApp
+        const whatsappNumber = '16282167264'; // Cambia a tu número de WhatsApp en formato internacional sin el signo +
+
+        // Seleccionar todos los botones de WhatsApp
+        const whatsappButtons = document.querySelectorAll('.whatsapp-button');
+
+        // Añadir evento de clic a cada botón
+        whatsappButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const message = button.getAttribute('data-message'); // Obtener el mensaje personalizado
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`; // Generar el enlace
+                window.open(whatsappUrl, '_blank'); // Abrir en nueva pestaña
+            });
+        });
+    </script>
+
+</body>
+</html>
+
